@@ -12,7 +12,7 @@
 	<artifactId>ms-customer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ms-customer</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Unit Test Project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -83,23 +83,38 @@
 			<artifactId>validation-api</artifactId>
 			<version>2.0.1.Final</version>
 		</dependency>
-		<!-- junit-->
+
+		<dependency>
+			<groupId>jakarta.persistence</groupId>
+			<artifactId>jakarta.persistence-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+		<!-- JUnit dependency -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter</artifactId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.9.0</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- Mockito-->
+<!--		<dependency>-->
+<!--			<groupId>org.junit.jupiter</groupId>-->
+<!--			<artifactId>junit-jupiter</artifactId>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
+
+		<!-- Mockito dependency -->
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
+			<version>5.0.0</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-junit-jupiter</artifactId>
-			<scope>test</scope>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.mockito</groupId>-->
+<!--			<artifactId>mockito-junit-jupiter</artifactId>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
 	</dependencies>
 
 	<build>
@@ -171,6 +186,12 @@
 							</limits>
 						</rule>
 					</rules>
+<!--					<excludes>-->
+<!--						&lt;!&ndash; Excluir paquete completo &ndash;&gt;-->
+<!--						<exclude>com/demo/example/mscustomerdummy/service/controller/*</exclude>-->
+<!--						&lt;!&ndash; Excluir una clase específica &ndash;&gt;-->
+<!--						<exclude>com/demo/example/mscustomerdummy/MsCustomerDummyApplication.class</exclude>-->
+<!--					</excludes>-->
 				</configuration>
 			</plugin>
 		</plugins>

@@ -1,21 +1,23 @@
 package com.xyzbank.ms_customer.controller;
 
-
 import com.xyzbank.ms_customer.model.Customer;
 import com.xyzbank.ms_customer.service.CustomerService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import lombok.RequiredArgsConstructor;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
+@RequiredArgsConstructor
+@RequestMapping("/customers")
 public class CustomerController {
 
-    @Autowired
-    private CustomerService customerService;
+    private final CustomerService customerService;
 
-    @GetMapping("/customer")
+    @GetMapping
     public List<Customer> getAllCustomers() {
         return customerService.getAllCustomers();   // Llama al servicio para obtener todos los clientes
     }
