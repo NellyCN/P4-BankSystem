@@ -44,7 +44,7 @@ class MsCustomerApplicationTests {
         // Configurar el comportamiento del mock
         when(customerRepository.findAll()).thenReturn(mockCustomers);
 
-        // Llamar al método a probar
+        // Llamar al metodo a probar
         List<Customer> result = customerService.getAllCustomers();
 
         // Verificar los resultados
