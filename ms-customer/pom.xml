@@ -186,12 +186,12 @@
 							</limits>
 						</rule>
 					</rules>
-<!--					<excludes>-->
-<!--						&lt;!&ndash; Excluir paquete completo &ndash;&gt;-->
-<!--						<exclude>com/demo/example/mscustomerdummy/service/controller/*</exclude>-->
-<!--						&lt;!&ndash; Excluir una clase específica &ndash;&gt;-->
-<!--						<exclude>com/demo/example/mscustomerdummy/MsCustomerDummyApplication.class</exclude>-->
-<!--					</excludes>-->
+					<excludes>
+						<!-- Excluir paquete completo -->
+						<exclude>com/demo/example/ms-customer/service/controller/*</exclude>
+						<!-- Excluir una clase específica -->
+						<exclude>com/demo/example/ms-customer/MsCustomerApplication.class</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>
