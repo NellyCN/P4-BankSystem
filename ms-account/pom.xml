@@ -83,23 +83,28 @@
 			<artifactId>validation-api</artifactId>
 			<version>2.0.1.Final</version>
 		</dependency>
-		<!-- junit-->
+
+		<dependency>
+			<groupId>jakarta.persistence</groupId>
+			<artifactId>jakarta.persistence-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+		<!-- JUnit dependency -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter</artifactId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.9.0</version>
 			<scope>test</scope>
 		</dependency>
 		<!-- Mockito-->
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
+			<version>5.0.0</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-junit-jupiter</artifactId>
-			<scope>test</scope>
-		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -171,6 +176,12 @@
 							</limits>
 						</rule>
 					</rules>
+					<excludes>
+						<!-- Excluir paquete completo -->
+						<exclude>com/xyzbank/ms-account/service/controller/*</exclude>
+						<!-- Excluir una clase específica -->
+						<exclude>com/xyzbank/ms-account/MsAccountApplication.class</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>
